@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Nav from '../components/Nav/Nav'
+import Jumbotron from '../components/Jumbotron/Jumbotron'
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -12,6 +12,7 @@ export default function Home() {
       </Head>
 <main>
   <Nav/>
+  <Jumbotron/>
 </main>
 
     </div>
