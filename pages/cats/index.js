@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Nav from '../../components/Nav/Nav'
 import Card from '../../components/Card/Card'
+import DefaultLayout from '../../layouts/Default'
 const index = () => {
 
   const [cats, setCats] = useState([])
@@ -15,21 +15,22 @@ const index = () => {
   }, [])
   return (
     <>
-      <Nav />
-      <div className="container mt-5">
-        <div className="d-flex flex-wrap justify-content-between">
+      <DefaultLayout>
+        <div className="container mt-5">
+          <div className="d-flex flex-wrap justify-content-between">
 
-        {cats.map(cat => (
-          <Card
-            name={cat.name}
-            id={cat.id}
-            phone={cat.phone}
-            image={cat.image}
-            email={cat.email}
-          />
-        ))}
+            {cats.map(cat => (
+              <Card
+                name={cat.name}
+                id={cat.id}
+                phone={cat.phone}
+                image={cat.image}
+                email={cat.email}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </DefaultLayout>
     </>
   )
 }

@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
 import { useEffect, useState } from 'react'
-import Nav from "../../components/Nav/Nav"
+import DefaultLayout from '../../layouts/Default'
 
 const Cat = () => {
 
@@ -22,7 +22,8 @@ const Cat = () => {
 
     return (
         <div>
-            <Nav />
+                 <DefaultLayout>
+        
             {cat && (
                 <div className="container mt-5 d-flex" >
                     <img src={cat.image.url} alt={cat.image.alt} />
@@ -32,6 +33,7 @@ const Cat = () => {
                     </div>
                 </div>
             )}
+            </DefaultLayout>
         </div>
     )
 }
