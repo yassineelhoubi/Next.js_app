@@ -1,5 +1,5 @@
 {
-  "name": "test-app",
+  "name": "test-nextjs",
   "private": true,
   "scripts": {
     "dev": "next dev",
